@@ -5,14 +5,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Архон — личный журнал записей</title>
   <meta name="description" content="Архон — личный журнал записей о важном." />
-  <meta name="theme-color" content="#141219" />
+  <meta name="theme-color" content="#1e1b18" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Spectral:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&display=swap" rel="stylesheet" />
 
   <link rel="stylesheet" href="assets/css/style.css" />
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'%3E%3Cpath fill='%23c9a254' d='M24 4 L28.49 17.82 L43.02 17.82 L31.27 26.36 L35.76 40.18 L24 31.64 L12.24 40.18 L16.73 26.36 L4.98 17.82 L19.51 17.82 Z'/%3E%3C/svg%3E" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'%3E%3Cpath fill='%23d3a44c' d='M24 4 L28.49 17.82 L43.02 17.82 L31.27 26.36 L35.76 40.18 L24 31.64 L12.24 40.18 L16.73 26.36 L4.98 17.82 L19.51 17.82 Z'/%3E%3C/svg%3E" />
   <script>
     (function () {
       try {
@@ -25,19 +25,6 @@
   </script>
 </head>
 <body>
-  <!-- атмосфера: зерно -->
-  <div class="grain" aria-hidden="true"></div>
-
-  <!-- фоновые знаки -->
-  <svg class="drift drift--a" aria-hidden="true" viewBox="0 0 64 64">
-    <circle cx="32" cy="32" r="29" fill="none" stroke="currentColor" stroke-width="1" />
-    <path d="M32 6 L37.84 23.97 L56.73 23.97 L41.45 35.07 L47.28 53.03 L32 41.93 L16.72 53.03 L22.55 35.07 L7.27 23.97 L26.16 23.97 Z" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linejoin="round" />
-  </svg>
-  <svg class="drift drift--b" aria-hidden="true" viewBox="0 0 64 64">
-    <circle cx="32" cy="32" r="27" fill="none" stroke="currentColor" stroke-width="1" />
-    <path d="M32 10 v44 M10 32 h44" fill="none" stroke="currentColor" stroke-width="1" />
-  </svg>
-
   <header class="site-header" id="siteHeader">
     <a class="brand" href="#/">
       <svg class="brand-mark" aria-hidden="true" viewBox="0 0 48 48">
@@ -50,14 +37,16 @@
         <a href="#/" data-nav="home">Журнал</a>
         <a href="#/about" data-nav="about">О журнале</a>
       </nav>
-      <button class="theme-toggle" id="themeToggle" type="button" aria-label="Переключить тему" title="Светлая / тёмная тема">
-        <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" aria-hidden="true">
-          <circle cx="12" cy="12" r="4"/>
-          <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/>
+      <button class="theme-toggle" id="themeToggle" type="button" aria-label="Переключить тему">
+        <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true">
+          <circle cx="12" cy="12" r="4.5"/>
+          <path d="M12 2.5v2.5M12 19v2.5M2.5 12H5M19 12h2.5M4.7 4.7l1.8 1.8M17.5 17.5l1.8 1.8M19.3 4.7l-1.8 1.8M6.5 17.5l-1.8 1.8"/>
         </svg>
         <svg class="icon-moon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
           <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/>
         </svg>
+        <span class="tt-label tt-to-light">Светлая</span>
+        <span class="tt-label tt-to-dark">Тёмная</span>
       </button>
     </div>
   </header>

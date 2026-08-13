@@ -192,7 +192,6 @@ function renderHome() {
 
   app.innerHTML = `
     <section class="hero">
-      <div class="hero-blob" aria-hidden="true"></div>
       <div class="wrap">
         <span class="hero-eyebrow reveal">${escapeHtml(SITE.heroEyebrow)}</span>
         <h1 class="hero-title reveal d1">${SITE.heroTitle}</h1>
@@ -221,7 +220,7 @@ function renderAbout() {
         <div class="about-card reveal">
           <h1>О журнале</h1>
           ${SITE.about.map((p) => `<p>${escapeHtml(p)}</p>`).join("")}
-          <p style="margin-top:1.6rem;font-style:italic;color:var(--moss)">— ${escapeHtml(SITE.author)}</p>
+          <p style="margin-top:1.6rem;font-style:italic;color:var(--accent)">— ${escapeHtml(SITE.author)}</p>
         </div>
       </div>
     </section>
@@ -261,7 +260,7 @@ async function renderPost(slug) {
         <div class="article-body reveal d2">${mdToHtml(content)}</div>
         <div class="article-end reveal">
           <span class="line"></span>
-          <span>с любовью, ${escapeHtml(SITE.author)}</span>
+          <span>С кайфом, ваш ${escapeHtml(SITE.author)}</span>
           <span class="line"></span>
         </div>
       </div>
@@ -306,7 +305,7 @@ function onScroll() {
       document.documentElement.setAttribute("data-theme", next);
       try { localStorage.setItem("archon-theme", next); } catch (e) {}
       const mc = document.querySelector('meta[name="theme-color"]');
-      if (mc) mc.setAttribute("content", next === "light" ? "#ece5d2" : "#141219");
+      if (mc) mc.setAttribute("content", next === "light" ? "#f6f1e7" : "#1e1b18");
     });
   }
 
