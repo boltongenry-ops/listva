@@ -427,7 +427,8 @@ body {
   .site-nav { gap: 1.1rem; }
   .hero { padding-top: 4rem; }
   .about-card { padding: 1.8rem 1.4rem; }
-  .tt-label { display: none; }  /* на мобильных — только иконка */
+  .theme-toggle { padding: 0.5rem 0.65rem; }
+  .theme-toggle .tt-label { display: none !important; }
 }
 
 @media (prefers-reduced-motion: reduce) {
