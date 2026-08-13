@@ -297,6 +297,19 @@ function onScroll() {
 /* ---------- запуск ---------- */
 (async function init() {
   $("#year").textContent = new Date().getFullYear();
+
+  // переключатель темы
+  const themeToggle = $("#themeToggle");
+  if (themeToggle) {
+    themeToggle.addEventListener("click", () => {
+      const next = document.documentElement.getAttribute("data-theme") === "light" ? "dark" : "light";
+      document.documentElement.setAttribute("data-theme", next);
+      try { localStorage.setItem("archon-theme", next); } catch (e) {}
+      const mc = document.querySelector('meta[name="theme-color"]');
+      if (mc) mc.setAttribute("content", next === "light" ? "#ece5d2" : "#141219");
+    });
+  }
+
   await loadIndex();
   window.addEventListener("hashchange", route);
   window.addEventListener("scroll", onScroll, { passive: true });
