@@ -3,39 +3,37 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Листва — личный журнал о важном</title>
-  <meta name="description" content="Личный журнал заметок о важном. Тёплый, медленный, органичный." />
-  <meta name="theme-color" content="#f6f0e4" />
+  <title>Архон — личный журнал записей</title>
+  <meta name="description" content="Архон — личный журнал записей о важном." />
+  <meta name="theme-color" content="#141219" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Spectral:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&display=swap" rel="stylesheet" />
 
   <link rel="stylesheet" href="assets/css/style.css" />
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%235f6f4a' d='M20.7 3.4C11.2 4.6 5.2 9 3.6 17.5c-.4 2.3.6 4.5 2.9 4.6 6.4.2 13.3-3.3 14.5-13.8.1-1.4-1-2.6-2.4-2.4z'/%3E%3C/svg%3E" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'%3E%3Cpath fill='%23c9a254' d='M24 4 L28.49 17.82 L43.02 17.82 L31.27 26.36 L35.76 40.18 L24 31.64 L12.24 40.18 L16.73 26.36 L4.98 17.82 L19.51 17.82 Z'/%3E%3C/svg%3E" />
 </head>
 <body>
-  <!-- atmosphere: paper grain -->
+  <!-- атмосфера: зерно -->
   <div class="grain" aria-hidden="true"></div>
 
-  <!-- drifting botanical decorations -->
+  <!-- фоновые знаки -->
   <svg class="drift drift--a" aria-hidden="true" viewBox="0 0 64 64">
-    <path d="M55 12C33 15 19 26 15 46c-.9 4.5.6 8.6 5.2 8.8 11 .3 22.6-5.6 24.9-24.3.4-3.5-2.6-6-6.1-5.6z" fill="none" stroke="currentColor" stroke-width="1.1"/>
-    <path d="M17 53C27 42 37 33 52 22" fill="none" stroke="currentColor" stroke-width="1.1" stroke-linecap="round"/>
+    <circle cx="32" cy="32" r="29" fill="none" stroke="currentColor" stroke-width="1" />
+    <path d="M32 6 L37.84 23.97 L56.73 23.97 L41.45 35.07 L47.28 53.03 L32 41.93 L16.72 53.03 L22.55 35.07 L7.27 23.97 L26.16 23.97 Z" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linejoin="round" />
   </svg>
-  <svg class="drift drift--b" aria-hidden="true" viewBox="0 0 48 48">
-    <circle cx="24" cy="24" r="20" fill="none" stroke="currentColor" stroke-width="1"/>
-    <path d="M24 6c3 7 3 29 0 36-3-7-3-29 0-36z" fill="none" stroke="currentColor" stroke-width="1"/>
-    <path d="M8 20c8 2 24 2 32 0M8 28c8-2 24-2 32 0" fill="none" stroke="currentColor" stroke-width="1"/>
+  <svg class="drift drift--b" aria-hidden="true" viewBox="0 0 64 64">
+    <circle cx="32" cy="32" r="27" fill="none" stroke="currentColor" stroke-width="1" />
+    <path d="M32 10 v44 M10 32 h44" fill="none" stroke="currentColor" stroke-width="1" />
   </svg>
 
   <header class="site-header" id="siteHeader">
     <a class="brand" href="#/">
-      <svg class="brand-mark" aria-hidden="true" viewBox="0 0 24 24">
-        <path d="M20.7 3.4C11.2 4.6 5.2 9 3.6 17.5c-.4 2.3.6 4.5 2.9 4.6 6.4.2 13.3-3.3 14.5-13.8.1-1.4-1-2.6-2.4-2.4z" fill="currentColor"/>
-        <path d="M6 20.5C10 15.5 15 11 20 6" fill="none" stroke="#f6f0e4" stroke-width="1.3" stroke-linecap="round"/>
+      <svg class="brand-mark" aria-hidden="true" viewBox="0 0 48 48">
+        <path d="M24 4 L28.49 17.82 L43.02 17.82 L31.27 26.36 L35.76 40.18 L24 31.64 L12.24 40.18 L16.73 26.36 L4.98 17.82 L19.51 17.82 Z" fill="currentColor" />
       </svg>
-      <span class="brand-name">Листва</span>
+      <span class="brand-name">Архон</span>
     </a>
     <nav class="site-nav">
       <a href="#/" data-nav="home">Журнал</a>
@@ -47,10 +45,10 @@
 
   <footer class="site-footer">
     <div class="footer-inner">
-      <svg class="footer-leaf" aria-hidden="true" viewBox="0 0 24 24">
-        <path d="M20.7 3.4C11.2 4.6 5.2 9 3.6 17.5c-.4 2.3.6 4.5 2.9 4.6 6.4.2 13.3-3.3 14.5-13.8.1-1.4-1-2.6-2.4-2.4z" fill="currentColor"/>
+      <svg class="footer-icon" aria-hidden="true" viewBox="0 0 48 48">
+        <path d="M24 4 L28.49 17.82 L43.02 17.82 L31.27 26.36 L35.76 40.18 L24 31.64 L12.24 40.18 L16.73 26.36 L4.98 17.82 L19.51 17.82 Z" fill="currentColor" />
       </svg>
-      <p>Листва <span class="sep">·</span> растёт на GitHub Pages <span class="sep">·</span> <span id="year"></span></p>
+      <p>Архон <span class="sep">·</span> на GitHub Pages <span class="sep">·</span> <span id="year"></span></p>
     </div>
   </footer>
 

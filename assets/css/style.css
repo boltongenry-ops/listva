@@ -1,22 +1,20 @@
 /* ============================================================
-   ЛИСТВА — органичный ботанический журнал
+   АРХОН — личный журнал · тёмный эзотерический стиль
    ============================================================ */
 
 :root {
-  --paper:        #f6f0e4;   /* тёплая бумага */
-  --paper-2:      #efe6d3;   /* бумага глубже */
-  --paper-3:      #fbf7ee;   /* почти белая */
-  --ink:          #2b2b20;   /* глубокий чернильно-зелёный */
-  --ink-soft:     #5c5b4b;   /* приглушённый */
-  --ink-faint:    #8b8877;   /* едва заметный */
-  --moss:         #5f6f4a;   /* мох */
-  --moss-dark:    #414f31;   /* тёмный мох */
-  --moss-deep:    #2f3a24;
-  --clay:         #bf6037;   /* терракота — акцент */
-  --clay-soft:    #d88a62;
-  --sage:         #a9b78c;   /* шалфей */
-  --line:         rgba(43, 43, 32, 0.14);
-  --line-soft:    rgba(43, 43, 32, 0.08);
+  --bg:          #141219;   /* глубокая тьма */
+  --bg-2:        #1c1922;   /* тьма светлее */
+  --surface:     #211d27;   /* карточки / код */
+  --ink:         #e8e0c8;   /* тёплая кость */
+  --ink-soft:    #b3a88d;
+  --ink-faint:   #877d68;
+  --gold:        #c9a254;   /* античное золото — пентаграмма */
+  --gold-soft:   #dfc488;
+  --crimson:     #92343a;   /* тёмный багрянец */
+  --crimson-soft:#b4545a;
+  --line:        rgba(232, 224, 200, 0.13);
+  --line-soft:   rgba(232, 224, 200, 0.07);
 
   --serif-display: "Cormorant", "Georgia", serif;
   --serif-body:    "Spectral", "Georgia", serif;
@@ -31,7 +29,7 @@ html { scroll-behavior: smooth; }
 
 body {
   font-family: var(--serif-body);
-  background: var(--paper);
+  background: var(--bg);
   color: var(--ink);
   line-height: 1.65;
   font-size: 17px;
@@ -41,7 +39,7 @@ body {
   text-rendering: optimizeLegibility;
 }
 
-::selection { background: var(--clay); color: #fff7ea; }
+::selection { background: var(--gold); color: #16130c; }
 
 /* ---------- атмосфера: зерно ---------- */
 .grain {
@@ -49,17 +47,17 @@ body {
   inset: 0;
   z-index: 60;
   pointer-events: none;
-  opacity: 0.05;
-  mix-blend-mode: multiply;
+  opacity: 0.06;
+  mix-blend-mode: overlay;
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
 }
 
-/* ---------- дрейфующие листья ---------- */
+/* ---------- фоновые знаки ---------- */
 .drift {
   position: fixed;
   z-index: 0;
-  color: var(--moss);
-  opacity: 0.08;
+  color: var(--gold);
+  opacity: 0.07;
   pointer-events: none;
 }
 .drift--a {
@@ -68,7 +66,7 @@ body {
   animation: driftA 26s ease-in-out infinite alternate;
 }
 .drift--b {
-  width: 220px; height: 220px;
+  width: 240px; height: 240px;
   bottom: 10%; left: -70px;
   animation: driftB 22s ease-in-out infinite alternate;
 }
@@ -96,7 +94,7 @@ body {
   background: transparent;
 }
 .site-header.scrolled {
-  background: rgba(246, 240, 228, 0.82);
+  background: rgba(20, 18, 25, 0.82);
   backdrop-filter: blur(14px);
   -webkit-backdrop-filter: blur(14px);
   box-shadow: 0 1px 0 var(--line-soft);
@@ -111,17 +109,17 @@ body {
 }
 .brand-mark {
   width: 26px; height: 26px;
-  color: var(--moss);
-  transform: rotate(-8deg);
-  transition: transform 0.6s var(--ease);
+  color: var(--gold);
+  transform: rotate(0deg);
+  transition: transform 0.8s var(--ease);
 }
-.brand:hover .brand-mark { transform: rotate(12deg) scale(1.08); }
+.brand:hover .brand-mark { transform: rotate(72deg) scale(1.06); }
 .brand-name {
   font-family: var(--serif-display);
   font-size: 1.55rem;
   font-weight: 600;
   font-style: italic;
-  letter-spacing: 0.02em;
+  letter-spacing: 0.06em;
 }
 .site-nav { display: flex; gap: 2rem; }
 .site-nav a {
@@ -140,7 +138,7 @@ body {
   left: 0; bottom: 0;
   height: 1px;
   width: 100%;
-  background: var(--clay);
+  background: var(--gold);
   transform: scaleX(0);
   transform-origin: left;
   transition: transform 0.45s var(--ease);
@@ -168,15 +166,15 @@ body {
   position: absolute;
   z-index: -1;
   background:
-    radial-gradient(ellipse at 30% 30%, rgba(95,111,74,0.16), transparent 62%),
-    radial-gradient(ellipse at 78% 72%, rgba(191,96,55,0.14), transparent 58%);
+    radial-gradient(ellipse at 30% 30%, rgba(201, 162, 84, 0.16), transparent 62%),
+    radial-gradient(ellipse at 78% 72%, rgba(146, 52, 58, 0.20), transparent 58%);
   width: 62%;
   aspect-ratio: 1 / 0.82;
   right: -6%;
   top: -4%;
   border-radius: var(--radius-blob);
   transform: rotate(-6deg);
-  filter: blur(2px);
+  filter: blur(6px);
 }
 .hero-eyebrow {
   display: inline-flex;
@@ -186,13 +184,13 @@ body {
   font-size: 0.82rem;
   letter-spacing: 0.32em;
   text-transform: uppercase;
-  color: var(--clay);
+  color: var(--gold);
   margin-bottom: 1.6rem;
 }
 .hero-eyebrow::before {
-  content: "";
-  width: 2.4rem; height: 1px;
-  background: var(--clay);
+  content: "✶";
+  font-size: 0.95rem;
+  color: var(--gold);
 }
 .hero-title {
   font-family: var(--serif-display);
@@ -204,7 +202,7 @@ body {
 }
 .hero-title em {
   font-style: italic;
-  color: var(--moss);
+  color: var(--gold);
 }
 .hero-sub {
   margin-top: 1.6rem;
@@ -212,7 +210,7 @@ body {
   font-size: 1.12rem;
   color: var(--ink-soft);
 }
-.hero-sub em { font-style: italic; color: var(--clay); }
+.hero-sub em { font-style: italic; color: var(--gold); }
 
 /* ============================================================
    СПИСОК ЗАПИСЕЙ
@@ -238,12 +236,11 @@ body {
   position: relative;
 }
 .section-head .stem::after {
-  content: "";
+  content: "✶";
   position: absolute;
-  left: 0; top: -2.5px;
-  width: 6px; height: 6px;
-  border-radius: 50%;
-  background: var(--sage);
+  left: 0; top: -0.8rem;
+  font-size: 0.85rem;
+  color: var(--gold);
 }
 
 .posts { padding: 0 4vw 5rem; }
@@ -259,7 +256,7 @@ body {
 }
 .post-card:last-of-type { border-bottom: 1px solid var(--line); }
 .post-card:hover { transform: translateX(0.6rem); }
-.post-card:hover .post-title { color: var(--moss); }
+.post-card:hover .post-title { color: var(--gold); }
 .post-card:hover .post-arrow { opacity: 1; transform: translateX(0); }
 
 .post-meta {
@@ -276,7 +273,7 @@ body {
 .post-meta .dot {
   width: 4px; height: 4px;
   border-radius: 50%;
-  background: var(--clay-soft);
+  background: var(--crimson-soft);
 }
 .post-title {
   font-family: var(--serif-display);
@@ -302,17 +299,17 @@ body {
   font-family: var(--serif-display);
   font-size: 0.78rem;
   letter-spacing: 0.04em;
-  color: var(--moss-dark);
-  background: rgba(95, 111, 74, 0.1);
-  border: 1px solid rgba(95, 111, 74, 0.22);
+  color: var(--gold-soft);
+  background: rgba(201, 162, 84, 0.08);
+  border: 1px solid rgba(201, 162, 84, 0.28);
   padding: 0.22rem 0.7rem;
   border-radius: 999px;
   transition: background 0.3s var(--ease);
 }
-.post-card:hover .tag { background: rgba(95, 111, 74, 0.18); }
+.post-card:hover .tag { background: rgba(201, 162, 84, 0.16); }
 .post-arrow {
   font-size: 1.2rem;
-  color: var(--clay);
+  color: var(--gold);
   opacity: 0;
   transform: translateX(-0.6rem);
   transition: opacity 0.4s var(--ease), transform 0.4s var(--ease);
@@ -333,7 +330,7 @@ body {
   margin-bottom: 2.4rem;
   transition: color 0.3s var(--ease);
 }
-.back-link:hover { color: var(--clay); }
+.back-link:hover { color: var(--gold); }
 .back-link .arr { transition: transform 0.3s var(--ease); }
 .back-link:hover .arr { transform: translateX(-4px); }
 
@@ -357,13 +354,13 @@ body {
   text-transform: uppercase;
   color: var(--ink-faint);
 }
-.article-meta .dot { width: 4px; height: 4px; border-radius: 50%; background: var(--clay-soft); }
+.article-meta .dot { width: 4px; height: 4px; border-radius: 50%; background: var(--crimson-soft); }
 
 .article-body {
   max-width: 46rem;
   font-size: 1.09rem;
   line-height: 1.8;
-  color: #33332a;
+  color: #cfc7b2;
 }
 .article-body p { margin: 1.25rem 0; }
 .article-body > p:first-of-type::first-letter {
@@ -372,7 +369,7 @@ body {
   font-size: 4.4rem;
   line-height: 0.82;
   padding: 0.12rem 0.7rem 0 0;
-  color: var(--clay);
+  color: var(--gold);
   font-weight: 600;
 }
 .article-body h2, .article-body h3, .article-body h4 {
@@ -386,38 +383,40 @@ body {
 .article-body h3 { font-size: 1.4rem; }
 .article-body h4 { font-size: 1.15rem; }
 .article-body a {
-  color: var(--clay);
+  color: var(--gold);
   text-decoration: none;
-  border-bottom: 1px solid rgba(191, 96, 55, 0.35);
+  border-bottom: 1px solid rgba(201, 162, 84, 0.4);
   transition: border-color 0.3s var(--ease), background 0.3s var(--ease);
 }
-.article-body a:hover { border-color: var(--clay); background: rgba(191,96,55,0.06); }
+.article-body a:hover { border-color: var(--gold); background: rgba(201,162,84,0.08); }
 .article-body strong { color: var(--ink); }
 .article-body ul, .article-body ol { margin: 1.25rem 0; padding-left: 1.4rem; }
 .article-body li { margin: 0.45rem 0; }
-.article-body li::marker { color: var(--moss); }
+.article-body li::marker { color: var(--gold); }
 .article-body blockquote {
   margin: 2rem 0;
   padding: 0.4rem 0 0.4rem 1.6rem;
-  border-left: 3px solid var(--clay);
+  border-left: 3px solid var(--gold);
   font-family: var(--serif-display);
   font-size: 1.3rem;
   font-style: italic;
   line-height: 1.5;
-  color: var(--moss-dark);
+  color: var(--gold-soft);
 }
 .article-body code {
   font-family: "Cascadia Code", "Consolas", monospace;
   font-size: 0.86em;
-  background: rgba(43, 43, 32, 0.07);
+  background: rgba(232, 224, 200, 0.08);
   padding: 0.12rem 0.4rem;
   border-radius: 4px;
+  color: var(--gold-soft);
 }
 .article-body pre {
   margin: 1.6rem 0;
   padding: 1.2rem 1.4rem;
-  background: #2e3229;
-  color: #e7e2d4;
+  background: #100e14;
+  color: #e8e0c8;
+  border: 1px solid var(--line-soft);
   border-radius: 10px;
   overflow-x: auto;
   font-size: 0.9rem;
@@ -454,20 +453,20 @@ body {
 .about { padding: 7rem 4vw 6rem; }
 .about-card {
   max-width: 46rem;
-  background: var(--paper-3);
+  background: var(--surface);
   border: 1px solid var(--line-soft);
   border-radius: 22px;
   padding: 3rem 3.2rem;
-  box-shadow: 0 20px 50px -32px rgba(43,43,32,0.4);
+  box-shadow: 0 30px 60px -36px rgba(0, 0, 0, 0.8);
   position: relative;
 }
 .about-card::before {
-  content: "❦";
+  content: "✶";
   position: absolute;
   top: -1.6rem; right: 2.4rem;
   font-size: 2.4rem;
-  color: var(--clay);
-  opacity: 0.75;
+  color: var(--gold);
+  opacity: 0.85;
 }
 .about-card h1 {
   font-family: var(--serif-display);
@@ -494,13 +493,13 @@ body {
   align-items: center;
   gap: 0.6rem;
 }
-.footer-leaf { width: 20px; height: 20px; color: var(--moss); transform: rotate(-10deg); }
+.footer-icon { width: 20px; height: 20px; color: var(--gold); }
 .site-footer p {
   font-family: var(--serif-display);
   color: var(--ink-faint);
   font-size: 0.95rem;
 }
-.site-footer .sep { color: var(--clay-soft); margin: 0 0.2rem; }
+.site-footer .sep { color: var(--crimson-soft); margin: 0 0.2rem; }
 
 /* ============================================================
    ПОЯВЛЕНИЕ ПРИ СКРОЛЛЕ
@@ -526,6 +525,7 @@ body {
   font-style: italic;
   font-size: 1.2rem;
 }
+.empty a { color: var(--gold); }
 
 /* ============================================================
    АДАПТИВ
