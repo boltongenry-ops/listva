@@ -1,5 +1,13 @@
 [
   {
+    "slug": "deepseek-v4-benchmarks",
+    "title": "DeepSeek V4 Pro и Flash — бенчмарки против остальных",
+    "date": "2026-08-13",
+    "excerpt": "V4 Pro официально вышел. Параметры, контекст, архитектура и как модели смотрятся на фоне Claude, GPT и Gemini.",
+    "tags": ["deepseek", "ai", "бенчмарки"],
+    "readingTime": 4
+  },
+  {
     "slug": "deepseek-v4-pro-ga",
     "title": "DeepSeek V4 Pro — выход в GA",
     "date": "2026-08-13",
